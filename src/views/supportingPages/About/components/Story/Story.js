@@ -3,7 +3,7 @@ import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import TeamWorkingIllustration from 'svg/illustrations/TeamWorking';
+// import TeamWorkingIllustration from 'svg/illustrations/TeamWorking';
 
 const Story = () => {
   const theme = useTheme();
@@ -77,11 +77,7 @@ const Story = () => {
         justifyContent={'center'}
         alignItems={'center'}
         marginBottom={4}
-      >
-        <Box height={'100%'} width={'100%'} maxWidth={600}>
-          <TeamWorkingIllustration height={'100%'} width={'100%'} />
-        </Box>
-      </Box>
+      ></Box>
       <Box>
         <Typography
           sx={{

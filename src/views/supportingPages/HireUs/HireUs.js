@@ -5,6 +5,7 @@ import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
 import Container from 'common/Container';
 import { Headline, Form, Partners } from './components';
+import Faq from '../Pricing/components/Faq';
 
 const HireUs = ({ themeMode = 'light' }) => {
   const theme = useTheme();
@@ -30,6 +31,11 @@ const HireUs = ({ themeMode = 'light' }) => {
       <Container paddingTop={'0 !important'}>
         <Partners themeMode={themeMode} />
       </Container>
+      <Box bgcolor={theme.palette.alternate.main}>
+        <Container maxWidth={800}>
+          <Faq />
+        </Container>
+      </Box>
     </Box>
   );
 };

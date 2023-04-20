@@ -2,7 +2,15 @@ import React from 'react';
 import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Container from 'common/Container';
-import { DemoPages, Features, Footer, Hero, Highlights } from './components';
+// import { Footer } from './components';
+import Cover from '../../../views/supportingPages/Cover';
+import { Benefits } from '../Advertisement/components';
+import { Process } from '../DesignAgency/components';
+import Reviews from '../Course/components/Reviews';
+import ReviewSection from '../Advertisement/components/ReviewSection';
+import Team from '../Crypto/components/Team';
+import Contact from '../DesignAgency/components/Contact';
+import Main from '../DesignAgency/components/Main';
 
 const Home = () => {
   const theme = useTheme();
@@ -10,23 +18,32 @@ const Home = () => {
     <Box>
       <Box bgcolor={theme.palette.alternate.main} position={'relative'}>
         <Container position="relative" zIndex={2}>
-          <Hero />
+          <Cover />
         </Container>
       </Box>
       <Container>
-        <Highlights />
+        <Benefits />
       </Container>
       <Container>
-        <Features />
+        <Process />
       </Container>
-      <Box bgcolor={theme.palette.alternate.main}>
+      <Container>
+        <Reviews />
+      </Container>
+      <Container>
+        <ReviewSection />
+      </Container>
+      <Container>
+        <Main />
+      </Container>
+      <Container>
+        <Team />
+      </Container>
+      <Box bgcolor={theme.palette.primary.main}>
         <Container>
-          <DemoPages />
+          <Contact />
         </Container>
       </Box>
-      <Container>
-        <Footer />
-      </Container>
     </Box>
   );
 };

@@ -4,14 +4,7 @@ import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Box from '@mui/material/Box';
 import Container from 'common/Container';
-import {
-  Contact,
-  Hero,
-  Process,
-  Reviews,
-  SeenOn,
-  WhatWeDo,
-} from './components';
+import { Contact, Process, Reviews, SeenOn, WhatWeDo } from './components';
 
 const Services = ({ themeMode = 'light' }) => {
   const theme = useTheme();
@@ -21,9 +14,6 @@ const Services = ({ themeMode = 'light' }) => {
 
   return (
     <Box>
-      <Container>
-        <Hero />
-      </Container>
       <Container>
         <WhatWeDo />
       </Container>

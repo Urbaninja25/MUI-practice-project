@@ -2,7 +2,6 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import DesignerIllustration from 'svg/illustrations/Designer';
 
 const Hero = () => {
   return (
@@ -66,11 +65,11 @@ const Hero = () => {
           </Box>
         </Box>
       </Box>
-      <Box display={'flex'} justifyContent={'center'} alignItems={'center'}>
-        <Box height={'100%'} width={'100%'} maxWidth={600}>
-          <DesignerIllustration height={'100%'} width={'100%'} />
-        </Box>
-      </Box>
+      <Box
+        display={'flex'}
+        justifyContent={'center'}
+        alignItems={'center'}
+      ></Box>
     </Box>
   );
 };

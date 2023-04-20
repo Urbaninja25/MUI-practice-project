@@ -17,14 +17,13 @@ const Cover = () => {
 
   return (
     <Box
-      minHeight={'calc(100vh - 64px - 183px)'}
-      height={'100%'}
+      minHeight={'100vh'}
       display={'flex'}
       alignItems={'center'}
       bgcolor={'alternate.main'}
     >
       <Container>
-        <Grid container spacing={6}>
+        <Grid container spacing={6} style={{ height: '100%' }}>
           <Grid item container justifyContent={'center'} xs={12} md={6}>
             <Box
               height={'100%'}
@@ -41,8 +40,9 @@ const Cover = () => {
             justifyContent={'center'}
             xs={12}
             md={6}
+            style={{ height: '100%' }}
           >
-            <Box>
+            <Box minHeight={400}>
               <Typography
                 variant="h3"
                 component={'h3'}
