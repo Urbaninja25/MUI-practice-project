@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
@@ -8,6 +7,7 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import MenuItem from '@mui/material/MenuItem';
+import { useForm } from '@formspree/react';
 
 const validationSchema = yup.object({
   firstName: yup
@@ -26,7 +26,9 @@ const validationSchema = yup.object({
     .string('Enter your email')
     .trim()
     .email('Please enter a valid email address')
+    .matches(/@/, 'Email must contain "@" symbol')
     .required('Email is required.'),
+
   phone: yup
     .string()
     .trim()
@@ -42,6 +44,8 @@ const validationSchema = yup.object({
 });
 
 const Form = () => {
+  const [state, submitForm] = useForm('xbjeqpev');
+
   const initialValues = {
     firstName: '',
     lastName: '',
@@ -51,19 +55,37 @@ const Form = () => {
     message: '',
   };
 
-  const onSubmit = (values) => {
-    return values;
-  };
-
   const formik = useFormik({
     initialValues,
     validationSchema: validationSchema,
-    onSubmit,
+    onSubmit: (values) => {
+      submitForm(values)
+        .then(() => {
+          formik.resetForm();
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    },
   });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    formik.handleSubmit();
+    if (formik.isValid) {
+      submitForm(formik.values)
+        .then(() => {
+          formik.resetForm();
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    }
+  };
 
   return (
     <Box>
-      <form onSubmit={formik.handleSubmit}>
+      <form noValidate autoComplete="off" onSubmit={handleSubmit}>
         <Box
           component={Grid}
           marginBottom={{ xs: 10, sm: 0 }}
@@ -184,8 +206,13 @@ const Form = () => {
             alignItems={'center'}
             flexDirection={'column'}
           >
-            <Button size={'large'} variant={'contained'} type={'submit'}>
-              Send request
+            <Button
+              size={'large'}
+              variant={'contained'}
+              type={'submit'}
+              name="submit"
+            >
+              {state.submitting ? 'Submitting...' : 'Contact'}
             </Button>
             <Typography
               variant={'subtitle2'}
@@ -193,7 +220,7 @@ const Form = () => {
               sx={{ marginTop: 2 }}
               align={'center'}
             >
-              We'll get back to you in 1-2 business days.
+              Well get back to you in 1-2 business days.
             </Typography>
           </Grid>
         </Box>

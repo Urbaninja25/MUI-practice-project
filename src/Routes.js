@@ -66,6 +66,8 @@ import {
   Illustrations as IllustrationsView,
   ChangeLog as ChangeLogView,
 } from './views/docs';
+import Blog from '../src/views/supportingPages/Blog/Blog';
+
 const Routes = () => {
   return (
     <ReactRoutes>
@@ -223,6 +225,7 @@ const Routes = () => {
           />
         ))()}
       />
+
       <Route
         exact
         path="/page-services"
@@ -243,6 +246,13 @@ const Routes = () => {
             component={ContactView}
             layout={MainLayout}
           />
+        ))()}
+      />
+      <Route
+        exact
+        path="/page-blog"
+        element={((matchProps) => (
+          <WithLayout {...matchProps} component={Blog} layout={MainLayout} />
         ))()}
       />
       <Route

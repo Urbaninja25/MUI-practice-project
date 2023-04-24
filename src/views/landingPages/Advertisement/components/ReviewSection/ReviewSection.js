@@ -74,9 +74,7 @@ const ReviewSection = () => {
           >
             <Box component={ListItem} disableGutters width={'auto'}>
               <ListItemAvatar>
-                <Avatar
-                  src={'https://assets.maccarianagency.com/avatars/img2.jpg'}
-                />
+                <Avatar src={'/img/img-4.jpg'} />
               </ListItemAvatar>
               <ListItemText
                 primary={'Jhon Anderson'}

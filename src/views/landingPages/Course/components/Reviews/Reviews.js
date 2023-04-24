@@ -45,8 +45,8 @@ const Reviews = () => {
       </Box>
       <Box display="flex" flexWrap="wrap">
         {[
-          'https://assets.maccarianagency.com/svg/logos/airbnb-original.svg',
-          'https://assets.maccarianagency.com/svg/logos/amazon-original.svg',
+          '/img/svg-1.svg',
+          '/img/svg-2.svg',
           'https://assets.maccarianagency.com/svg/logos/fitbit-original.svg',
         ].map((item, i) => (
           <Box
@@ -92,21 +92,21 @@ const Reviews = () => {
             {
               feedback:
                 'Working with Materialist is fantastic! Simple, re-usable components all in one platform.',
-              image: 'https://assets.maccarianagency.com/avatars/img1.jpg',
+              image: '/img/img-1.jpg',
               name: 'Clara Bertoletti',
               title: 'Material-UI lover',
             },
             {
               feedback:
                 'This is great bundle. I can contruct anything in just 10 minuts. Absolutelly love it! 10 out of 10.',
-              image: 'https://assets.maccarianagency.com/avatars/img2.jpg',
+              image: '/img/img-2.jpg',
               name: 'Jhon Anderson',
               title: 'Senior Frontend Developer',
             },
             {
               feedback:
-                'Love the app for cash back, reward points and fraud protection – just like when you\'re swiping your card.',
-              image: 'https://assets.maccarianagency.com/avatars/img3.jpg',
+                'This is great bundle. I can contruct anything in just 10 minuts. Absolutelly love it! 10 out of 10.',
+              image: '/img/img-3.jpg',
               name: 'Chary Smith',
               title: 'SEO at Comoti',
             },

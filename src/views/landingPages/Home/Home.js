@@ -10,7 +10,7 @@ import Reviews from '../Course/components/Reviews';
 import ReviewSection from '../Advertisement/components/ReviewSection';
 import Team from '../Crypto/components/Team';
 import Contact from '../DesignAgency/components/Contact';
-import Main from '../DesignAgency/components/Main';
+import Main from '../DesignAgency/components/Partners/Main';
 
 const Home = () => {
   const theme = useTheme();

@@ -57,7 +57,7 @@ const Reviews = () => {
                   },
                   {
                     feedback:
-                      'Love the app for cash back, reward points and fraud protection – just like when you\'re swiping your card.',
+                      'This is great bundle. I can contruct anything in just 10 minuts. Absolutelly love it! 10 out of 10.',
                     image:
                       'https://assets.maccarianagency.com/avatars/img3.jpg',
                     name: 'Chary Smith',
