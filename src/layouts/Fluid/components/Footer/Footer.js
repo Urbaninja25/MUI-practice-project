@@ -68,14 +68,6 @@ const Footer = () => (
     <Grid item xs={12}>
       <Typography
         align={'center'}
-        variant={'subtitle2'}
-        color="textSecondary"
-        gutterBottom
-      >
-        &copy; Webbee. 2021, Maccarian. All rights reserved
-      </Typography>
-      <Typography
-        align={'center'}
         variant={'caption'}
         color="textSecondary"
         component={'p'}

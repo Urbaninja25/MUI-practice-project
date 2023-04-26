@@ -54,7 +54,7 @@ const Hero = () => {
         borderRadius={2}
         boxShadow={4}
       >
-        <Form></Form>;
+        <Form></Form>
       </Box>
     );
   };
